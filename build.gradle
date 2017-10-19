@@ -17,6 +17,7 @@ dependencies {
 }
 
 jar {
+ 	
     baseName 'JCat-GameEngine'
 }
 

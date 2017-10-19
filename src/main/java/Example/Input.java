@@ -8,7 +8,7 @@ import JCat.Utils.ImageLoader;
 import JCat.Utils.ImageLoader.onAchieveListener;
 import JCatGame.JGame;
 
-public class Basic {
+public class Input {
 	public static void main(String[] args) {
 
 		ImageLoader loader = new ImageLoader();
@@ -31,15 +31,16 @@ public class Basic {
 		bitmap.y = game.getStage().getStageHeight() / 2;
 		bitmap.setAnchorX(0.5);
 		bitmap.setAnchorY(0.5);
-		bitmap.addEventListener(Event.UPDATE, new EventListener() {
-
+		game.getStage().addChildAll(bitmap);
+		
+		game.getStage().addEventListener(Event.UPDATE, new EventListener() {
+			
 			@Override
 			public void onResponce(Event event) {
-				bitmap.rotation += 5;
+				
+				
 			}
 		});
-
-		game.getStage().addChildAll(bitmap);
 
 	}
 }
