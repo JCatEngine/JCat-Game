@@ -1,5 +1,7 @@
 package JCatGame.Core.GameObject;
 
-public class BaseDisplayObject {
+import JCat.Display.Sprite;
+
+public class BaseDisplayObject extends Sprite{
 
 }

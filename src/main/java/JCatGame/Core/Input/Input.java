@@ -59,7 +59,7 @@ public class Input extends BaseManager{
 		return keys.get(keyCode)!=null&&keys.get(keyCode).state==KeyState.Down;
 	}
 	
-	public boolean isKeyDownIng(int keyCode)
+	public boolean isKeyDowning(int keyCode)
 	{
 		//这里把down和downing都返回true了 不然貌似单单检测downing会有不爽的延时 虽然只有两帧还是感觉的出来
 		return keys.get(keyCode)!=null&&(keys.get(keyCode).state==KeyState.Down||keys.get(keyCode).state==KeyState.DownIng);
@@ -70,7 +70,7 @@ public class Input extends BaseManager{
 	 * 输入原始输入(某按键是否按下)
 	 * 将捕获到的原始输入转换为按键状态
 	 */
-	public void RawInput(Integer keyCode,boolean isDown)
+	public void rawInput(int keyCode,boolean isDown)
 	{
 		
 		//递进更新(如果很难明白逻辑可以画一个状态机就明白了)
